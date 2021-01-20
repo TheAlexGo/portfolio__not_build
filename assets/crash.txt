@@ -1,0 +1,80 @@
+date/time         : 2020-12-03, 01:12:14, 399ms
+computer name     : DESKTOP-FE9AH4R
+user name         : alex2
+registered owner  : Пользователь Windows
+operating system  : Windows NT New x64 build 9200
+system language   : Russian
+system up time    : 2 hours 57 minutes
+program up time   : 330 milliseconds
+processors        : 12x Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+physical memory   : 4219/16178 MB (free/total)
+free disk space   : (C:) 15,39 GB (D:) 531,90 GB
+display mode      : 1536x864, 32 bit
+process id        : $4c5c
+allocated memory  : 39,16 MB
+command line      : D:\sendmail\sendmail.exe -t
+executable        : sendmail.exe
+exec. date/time   : 2011-06-18 00:10
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $310eba22, $f26cfac8, $f26cfac8
+exception number  : 1
+exception class   : EIdReplyPOP3Error
+exception message : POP3 is available only with SSL or TLS connection enabled.
+
+main thread ($581c):
+0045ce46 +036 sendmail.exe IdReplyPOP3     337   +1 TIdReplyPOP3.RaiseReplyError
+0043ff28 +008 sendmail.exe IdTCPConnection 576   +0 TIdTCPConnection.RaiseExceptionForLastCmdResult
+004404e1 +021 sendmail.exe IdTCPConnection 812   +3 TIdTCPConnection.CheckResponse
+0044042e +02a sendmail.exe IdTCPConnection 796   +2 TIdTCPConnection.GetResponse
+00440495 +05d sendmail.exe IdTCPConnection 805   +4 TIdTCPConnection.SendCmd
+0045d71d +1b5 sendmail.exe IdPOP3          330  +31 TIdPOP3.Login
+0045dbf3 +143 sendmail.exe IdPOP3          570  +26 TIdPOP3.Connect
+004b5b85 +cd1 sendmail.exe sendmail        724 +242 initialization
+76cdfa27 +017 KERNEL32.DLL                          BaseThreadInitThunk
+
+thread $1fec:
+76cdfa27 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $ebc:
+76cdfa27 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $56a0:
+76cdfa27 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+0019fc9c  4b ce 45 00 de fa ed 0e - 01 00 00 00 07 00 00 00  K.E.............
+0019fcac  b0 fc 19 00 4b ce 45 00 - 28 ca 55 02 e8 1d 57 02  ....K.E.(.U...W.
+0019fcbc  14 d8 45 00 40 40 51 02 - e0 fc 19 00 cc fc 19 00  ..E.@@Q.........
+0019fccc  1c fd 19 00 c8 4b 40 00 - e0 fc 19 00 48 ca 55 02  .....K@.....H.U.
+0019fcdc  00 00 00 00 f8 fc 19 00 - 2b ff 43 00 e4 04 44 00  ........+.C...D.
+0019fcec  f0 05 44 00 40 40 51 02 - 7c d2 45 00 10 fd 19 00  ..D.@@Q.|.E.....
+0019fcfc  31 04 44 00 70 fd 19 00 - 00 00 00 00 7c d2 45 00  1.D.p.......|.E.
+0019fd0c  00 00 00 00 3c fd 19 00 - 98 04 44 00 70 fd 19 00  ....<.....D.p...
+0019fd1c  4c fd 19 00 c8 4b 40 00 - 3c fd 19 00 b4 4e 4b 00  L....K@.<....NK.
+0019fd2c  b4 4e 4b 00 00 00 00 00 - 14 d8 45 00 00 00 00 00  .NK.......E.....
+0019fd3c  98 fd 19 00 22 d7 45 00 - 70 fd 19 00 00 00 00 00  ....".E.p.......
+0019fd4c  a0 fd 19 00 c8 4b 40 00 - 98 fd 19 00 00 00 00 00  .....K@.........
+0019fd5c  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fd6c  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fd7c  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fd8c  00 00 00 00 40 40 51 02 - 00 00 00 00 d0 fd 19 00  ....@@Q.........
+0019fd9c  f9 db 45 00 ac fd 19 00 - 5f 4d 40 00 d0 fd 19 00  ..E....._M@.....
+0019fdac  d8 fd 19 00 c8 4b 40 00 - d0 fd 19 00 b4 4e 4b 00  .....K@......NK.
+0019fdbc  b4 4e 4b 00 bc c2 41 00 - 00 00 00 00 40 40 51 02  .NK...A.....@@Q.
+0019fdcc  00 00 00 00 70 ff 19 00 - 8b 5b 4b 00 e4 fd 19 00  ....p....[K.....
+
+disassembling:
+[...]
+0045ce35       push    0
+0045ce37       mov     ecx, [ebx+$c]
+0045ce3a       mov     dl, 1
+0045ce3c       mov     eax, [$45c6d8]
+0045ce41       call    +$2e6 ($45d12c)        ; IdReplyPOP3.EIdReplyPOP3Error.CreateError
+0045ce46     > call    -$5815f ($404cec)      ; System.@RaiseExcept
+0045ce4b 338   xor     eax, eax
+0045ce4d       pop     edx
+0045ce4e       pop     ecx
+0045ce4f       pop     ecx
+0045ce50       mov     fs:[eax], edx
+[...]
